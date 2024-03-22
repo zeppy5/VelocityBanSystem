@@ -1,0 +1,11 @@
+file-version: 1
+
+# Enter your database details here
+# If the config isn't correct the plugin won't start!
+# Custom ban reason IDs can be configured in reasons.yml file
+
+host: 'localhost'
+database: 'ban'
+user: 'root'
+password: ''
+port: 3306
