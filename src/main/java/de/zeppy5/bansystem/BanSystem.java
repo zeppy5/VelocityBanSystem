@@ -58,7 +58,7 @@ public class BanSystem {
         String host = config.getString(Route.from("host"));
         String database = config.getString(Route.from("database"));
         String user = config.getString(Route.from("user"));
-        String password = config.getString(Route.from("user"));
+        String password = config.getString(Route.from("password"));
         int port = config.getInt(Route.from("port"));
 
         mySQL = new MySQL(host, database, user, password, port);

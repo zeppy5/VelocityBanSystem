@@ -29,12 +29,13 @@ public class MySQL {
 
     public void connect() {
         try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://" +
                     HOST + ":" +
                     PORT + "/" +
                     DATABASE + "?autoReconnect=true";
             connection = DriverManager.getConnection(url, USER, PASSWORD);
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
             throw new RuntimeException("Could not connect to Database. Is the config configured correctly?");
         }
