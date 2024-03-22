@@ -28,7 +28,8 @@ import java.nio.file.Path;
 @Plugin(
         id = "bansystem",
         name = "VelocityBanSystem",
-        version = "1.1"
+        version = "1.1",
+        authors = {"zeppy5"}
 )
 public class BanSystem {
 
@@ -61,7 +62,7 @@ public class BanSystem {
         String password = config.getString(Route.from("password"));
         int port = config.getInt(Route.from("port"));
 
-        mySQL = new MySQL(host, database, user, password, port);
+        mySQL = new MySQL(host, database, user, password, port, logger);
 
         banManager = new BanManager(this);
     }

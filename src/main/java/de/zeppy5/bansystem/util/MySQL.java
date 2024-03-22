@@ -1,5 +1,7 @@
 package de.zeppy5.bansystem.util;
 
+import org.slf4j.Logger;
+
 import java.sql.*;
 
 public class MySQL {
@@ -16,12 +18,15 @@ public class MySQL {
 
     private Connection connection;
 
-    public MySQL(String host, String database, String user, String password, int port) {
+    private final Logger logger;
+
+    public MySQL(String host, String database, String user, String password, int port, Logger logger) {
         this.HOST = host;
         this.DATABASE = database;
         this.USER = user;
         this.PASSWORD = password;
         this.PORT = port;
+        this.logger = logger;
 
         connect();
         setup();
@@ -35,6 +40,7 @@ public class MySQL {
                     PORT + "/" +
                     DATABASE + "?autoReconnect=true";
             connection = DriverManager.getConnection(url, USER, PASSWORD);
+            logger.info("[MySQL] Connected!");
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
             throw new RuntimeException("Could not connect to Database. Is the config configured correctly?");

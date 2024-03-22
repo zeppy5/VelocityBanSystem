@@ -156,7 +156,7 @@ public class BanCommand implements SimpleCommand {
                 player.ifPresent(p -> p.disconnect(instance.getBanManager().reason(reason)));
 
                 sender.sendMessage(Component.text("Banned player: " + args[0] + " (UUID: " + uuid + ")"
-                                + " for " + (args[1].equals("-1") ? "PERMANENT" : args[1]) + ". Reason: " + reason
+                                + " for " + (lengthString.equals("-1") ? "PERMANENT" : args[1]) + ". Reason: " + reason
                         , NamedTextColor.GREEN)
                 );
 
