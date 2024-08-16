@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation("dev.dejvokep:boosted-yaml:1.3.1")
+    implementation("dev.dejvokep:boosted-yaml:1.3.6")
     implementation("mysql:mysql-connector-java:8.0.28")
     compileOnly("com.velocitypowered:velocity-api:3.1.1")
     annotationProcessor("com.velocitypowered:velocity-api:3.1.1")
