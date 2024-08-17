@@ -24,7 +24,7 @@ reasons:
     reason: 'Suspicious account activity'
     length: -1
   - id: 5
-    reason: 'Extreme Behavior'
+    reason: 'Extreme behavior'
     length: 7d
   - id: 6
     reason: 'Harassment of server staff'
