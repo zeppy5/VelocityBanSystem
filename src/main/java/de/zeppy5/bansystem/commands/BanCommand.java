@@ -23,6 +23,7 @@ public class BanCommand implements SimpleCommand {
     public void execute(Invocation invocation) {
 
         new Thread(() -> {
+
             CommandSource sender = invocation.source();
             String[] args = invocation.arguments();
 
