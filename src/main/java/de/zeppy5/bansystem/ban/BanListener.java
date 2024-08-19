@@ -24,7 +24,6 @@ public class BanListener {
         this.instance = instance;
     }
 
-
     @Subscribe
     public void onLogin(LoginEvent event) {
         ResultSet rs = instance.getBanManager().checkBanned(String.valueOf(event.getPlayer().getUniqueId()));
