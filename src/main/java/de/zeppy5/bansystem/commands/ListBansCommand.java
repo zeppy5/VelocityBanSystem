@@ -87,9 +87,9 @@ public class ListBansCommand implements SimpleCommand {
                     }
                 }
 
-                if ((page + 1) > (int) Math.ceil((double)size / itemsPerPage)) {
+                if ((page + 1) > (int) Math.ceil((double) size / itemsPerPage)) {
                     sender.sendMessage(Component.text("Invalid page number, there are ", NamedTextColor.RED)
-                            .append(Component.text((int) Math.ceil((double)size / itemsPerPage), NamedTextColor.BLUE))
+                            .append(Component.text((int) Math.ceil((double) size / itemsPerPage), NamedTextColor.BLUE))
                             .append(Component.text(" pages", NamedTextColor.RED))
                     );
                     return;
@@ -97,7 +97,7 @@ public class ListBansCommand implements SimpleCommand {
 
                 if (page < 0) {
                     sender.sendMessage(Component.text("Invalid page number, there are ", NamedTextColor.RED)
-                            .append(Component.text((int) Math.ceil((double)size / itemsPerPage), NamedTextColor.BLUE))
+                            .append(Component.text((int) Math.ceil((double) size / itemsPerPage), NamedTextColor.BLUE))
                             .append(Component.text(" pages", NamedTextColor.RED))
                     );
                     return;
@@ -151,7 +151,7 @@ public class ListBansCommand implements SimpleCommand {
 
     private void printBans(CommandSource sender, ResultSet rs, int size, int page) throws SQLException {
         sender.sendMessage(Component.text("--------------------------------------------------", NamedTextColor.YELLOW));
-        sender.sendMessage(Component.text("Page " + (page + 1) + " / " + (int) Math.ceil((double)size / itemsPerPage), NamedTextColor.GREEN));
+        sender.sendMessage(Component.text("Page " + (page + 1) + " / " + (int) Math.ceil((double) size / itemsPerPage), NamedTextColor.GREEN));
 
         rs.beforeFirst();
 
